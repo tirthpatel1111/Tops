@@ -148,9 +148,3 @@ SELECT
     DATE_SUB(last_day, INTERVAL (DAYOFWEEK(last_day) + 1) % 7 DAY) AS last_saturday_january_2015
 FROM last_day_january_2015;
 
-
-
-
-
-
-
