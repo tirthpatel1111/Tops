@@ -154,3 +154,13 @@ case
 select c.city_name,p.price,count(c.city_name)  as count_of_consume_product from products p join sales s on s.product_id=p.product_id join customers cu on cu.customer_id=s.customer_id join city c on c.city_id=cu.city_id where p.price=(select max(price) from products) group by p.price,c.city_name;
 -- give ratio of total sale and population in different cities
 select sum(c.population)/sum(p.price),c.city_name as ratio from products p join sales s on s.product_id=p.product_id join customers cu on cu.customer_id=s.customer_id join city c on c.city_id=cu.city_id group by c.city_id;
+
+---------------------------------------------------------------------- inshits of this project----------------------------------------------------------------------------------
+-- 1.Product Demand by City
+-- Identifying top-selling products per city helps businesses optimize inventory and promotions based on local preferences.
+-- 2.Revenue Optimization Strategies
+-- For high-rent cities: Introduce premium products and targeted discounts to attract high-income customers.
+-- For low-rent cities: Focus on high-volume, lower-cost products to maximize total sales
+-- 3.Expansion & Investment Decisions
+-- Cities with high sales but low population growth might be saturated markets, while growing cities with moderate sales could be better for expansion.
+-- Understanding city-wise purchasing patterns helps in pricing strategies and setting optimal product price points.
